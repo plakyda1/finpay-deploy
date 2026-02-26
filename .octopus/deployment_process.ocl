@@ -15,12 +15,12 @@ step "deploy-a-merchant-app" {
             Octopus.Action.Helm.TemplateValuesSources = <<-EOT
                 [
                   {
-                    "Type": "Chart",
-                    "ValuesFilePaths": "charts/merchant-portal/values.yaml\ncharts/merchant-portal/values-#{Octopus.Environment.Name | ToLower}.yaml"
-                  },
-                  {
                     "Type": "InlineYaml",
                     "Value": "env:\n  BRAND_COLOR: #{BrandColor}\n  DATA_REGION: #{DataRegion}"
+                  },
+                  {
+                    "Type": "Chart",
+                    "ValuesFilePaths": "charts/merchant-portal/values.yaml\ncharts/merchant-portal/values-#{Octopus.Environment.Name | ToLower}.yaml"
                   }
                 ]
                 EOT
