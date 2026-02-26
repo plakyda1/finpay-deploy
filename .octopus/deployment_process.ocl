@@ -19,11 +19,8 @@ step "deploy-a-merchant-app" {
                     "ValuesFilePaths": "charts/merchant-portal/values.yaml\ncharts/merchant-portal/values-#{Octopus.Environment.Name | ToLower}.yaml"
                   },
                   {
-                    "Type": "KeyValues",
-                    "Value": {
-                      "env.BRAND_COLOR": "#{BrandColor}",
-                      "env.DATA_REGION": "#{DataRegion}"
-                    }
+                    "Type": "InlineYaml",
+                    "Value": "env:\n  BRAND_COLOR: #{BrandColor}\n  DATA_REGION: #{DataRegion}"
                   }
                 ]
                 EOT
