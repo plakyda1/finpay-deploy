@@ -15,7 +15,7 @@ metadata:
   namespace: argocd
   annotations:
     argo.octopus.com/project: "payments-api-argo"
-    argo.octopus.com/environment: "Development"
+    argo.octopus.com/environment: "development"
 spec:
   project: default
   source:
@@ -37,7 +37,7 @@ metadata:
   namespace: argocd
   annotations:
     argo.octopus.com/project: "payments-api-argo"
-    argo.octopus.com/environment: "Staging"
+    argo.octopus.com/environment: "staging"
 spec:
   project: default
   source:
