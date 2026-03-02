@@ -1,0 +1,36 @@
+name = "Restart Service"
+default_guided_failure_mode = "EnvironmentDefault"
+description = ""
+
+connectivity_policy {
+    allow_deployments_to_no_targets = true
+}
+
+run_retention_policy {
+    type = "Default"
+}
+
+process {
+    step "restart-service" {
+        name = "Restart Service"
+        properties = {
+            Octopus.Action.TargetRoles = "payments-k8s"
+        }
+
+        action {
+            action_type = "Octopus.KubernetesRunScript"
+            properties = {
+                Octopus.Action.KubernetesContainers.Namespace = "#{Namespace}"
+                Octopus.Action.Script.ScriptBody = <<-EOT
+                    env=$(get_octopusvariable "Octopus.Environment.Name")
+                    env=${env,,}
+                    
+                    kubectl rollout restart deployment froud-detector-$env
+                    EOT
+                Octopus.Action.Script.ScriptSource = "Inline"
+                Octopus.Action.Script.Syntax = "Bash"
+            }
+            worker_pool = "hosted-ubuntu"
+        }
+    }
+}

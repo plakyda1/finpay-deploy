@@ -1,0 +1,21 @@
+variable "Namespace" {
+    value "fraud-dev" {
+        environment = ["development"]
+    }
+
+    value "fraud-staging" {
+        environment = ["staging"]
+    }
+
+    value "fraud-prod" {
+        environment = ["production"]
+    }
+}
+
+variable "RepoChartPath" {
+    value "charts/fraud-detector" {}
+}
+
+variable "RepoPath" {
+    value "https://github.com/plakyda1/finpay-deploy.git" {}
+}

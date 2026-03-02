@@ -1,0 +1,35 @@
+step "deploy-a-froud-detector" {
+    name = "Deploy a froud-detector"
+    properties = {
+        Octopus.Action.TargetRoles = "payments-k8s"
+    }
+
+    action {
+        action_type = "Octopus.HelmChartUpgrade"
+        properties = {
+            Octopus.Action.GitRepository.Source = "External"
+            Octopus.Action.Helm.ChartDirectory = "#{RepoChartPath}"
+            Octopus.Action.Helm.Namespace = "#{Namespace}"
+            Octopus.Action.Helm.ReleaseName = "froud-detector-#{Octopus.Environment.Name | ToLower}"
+            Octopus.Action.Helm.ResetValues = "True"
+            Octopus.Action.Helm.TemplateValuesSources = <<-EOT
+                [
+                  {
+                    "Type": "Chart",
+                    "ValuesFilePaths": "#{RepoChartPath}/values.yaml\n#{RepoChartPath}/values-#{Octopus.Environment.Name | ToLower}.yaml"
+                  }
+                ]
+                EOT
+            Octopus.Action.Kubernetes.ResourceStatusCheck = "True"
+            Octopus.Action.Script.ScriptSource = "GitRepository"
+        }
+        worker_pool = "hosted-ubuntu"
+
+        git_dependencies {
+            default_branch = "main"
+            git_credential_id = "GitCredentials-21"
+            git_credential_type = "Library"
+            repository_uri = "#{RepoPath}"
+        }
+    }
+}
