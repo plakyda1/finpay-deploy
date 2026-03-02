@@ -19,3 +19,7 @@ variable "RepoChartPath" {
 variable "RepoPath" {
     value "https://github.com/plakyda1/finpay-deploy.git" {}
 }
+
+variable "Testath" {
+    value "test" {}
+}
