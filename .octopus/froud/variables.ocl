@@ -13,7 +13,7 @@ variable "Namespace" {
 }
 
 variable "RepoChartPath" {
-    value "charts/fraud-detector" {}
+    value "charts/fraud-detector-BROKEN" {}
 }
 
 variable "RepoPath" {
