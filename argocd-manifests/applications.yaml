@@ -8,46 +8,46 @@
 #
 # Apply with: kubectl apply -f argocd-manifests/applications.yaml
 # ---
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   name: payments-api-dev
-#   namespace: argocd
-#   annotations:
-#     argo.octopus.com/project: "payments-api-argo"
-#     argo.octopus.com/environment: "development"
-# spec:
-#   project: default
-#   source:
-#     repoURL: https://github.com/plakyda1/finpay-deploy.git
-#     targetRevision: octopus
-#     path: argocd-manifests/payments-api/development
-#   destination:
-#     server: https://kubernetes.default.svc
-#     namespace: payments-dev
-#   syncPolicy:
-#     automated:
-#       prune: true
-#       selfHeal: true
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: payments-api-staging
+  name: payments-api-dev
   namespace: argocd
   annotations:
     argo.octopus.com/project: "argo"
-    argo.octopus.com/environment: "staging"
+    argo.octopus.com/environment: "development"
 spec:
   project: default
   source:
     repoURL: https://github.com/plakyda1/finpay-deploy.git
     targetRevision: octopus
-    path: argocd-manifests/payments-api/staging
+    path: argocd-manifests/payments-api/development
   destination:
     server: https://kubernetes.default.svc
-    namespace: payments-staging
+    namespace: argoctopus
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: payments-api-staging
+#   namespace: argocd
+#   annotations:
+#     argo.octopus.com/project: "argo"
+#     argo.octopus.com/environment: "staging"
+# spec:
+#   project: default
+#   source:
+#     repoURL: https://github.com/plakyda1/finpay-deploy.git
+#     targetRevision: octopus
+#     path: argocd-manifests/payments-api/staging
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: payments-staging
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
