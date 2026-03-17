@@ -20,7 +20,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/plakyda1/finpay-deploy.git
-    targetRevision: octopus
+    targetRevision: main
     path: argocd-manifests/payments-api/development
   destination:
     server: https://kubernetes.default.svc
