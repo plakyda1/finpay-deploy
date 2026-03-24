@@ -15,7 +15,7 @@ metadata:
   namespace: argocd
   annotations:
     argo.octopus.com/project: "argoctopus"
-    argo.octopus.com/environment: "production"
+    argo.octopus.com/environment: "development"
 spec:
   project: default
   source:
