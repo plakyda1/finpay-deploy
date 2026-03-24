@@ -13,9 +13,8 @@ kind: Application
 metadata:
   name: payments-api-dev
   namespace: argocd
-
   annotations:
-    argo.octopus.com/project: "argoctopus"
+    argo.octopus.com/project: "spider"
     argo.octopus.com/environment: "development"
 spec:
   project: default
