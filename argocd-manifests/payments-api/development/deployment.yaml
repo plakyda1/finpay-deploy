@@ -9,6 +9,10 @@ spec:
   replicas: 5
   strategy:
     canary:
+      analysis:
+        templates:
+          - templateName: payments-api-noop
+        startingStep: 1
       steps:
       - setWeight: 20
       - pause: {}
@@ -56,3 +60,25 @@ spec:
       targetPort: 80
   selector:
     app: payments-api
+---
+  apiVersion: argoproj.io/v1alpha1                                                                                                           
+  kind: AnalysisTemplate                                                                                                                   
+  metadata:
+    name: payments-api-noop
+    namespace: argoctopus                                                                                                                    
+  spec:
+    metrics:                                                                                                                                 
+      - name: always-pass                                                                                                                  
+        interval: 10s
+        count: 3
+        provider:
+          job:
+            spec:                                                                                                                            
+              backoffLimit: 0
+              template:                                                                                                                      
+                spec:                                                                                                                      
+                  containers:
+                    - name: noop
+                      image: alpine:3.18
+                      command: ["sh", "-c", "exit 0"]                                                                                        
+                  restartPolicy: Never
