@@ -8,23 +8,27 @@ metadata:
 spec:
   replicas: 5
   strategy:
-    canary:
-      analysis:
-        templates:
-          - templateName: payments-api-noop
-        startingStep: 1
-      steps:
-      - analysis:               ← this is a step analysis                                                                                                                                                        
-        templates:                                     
-          - templateName: payments-api-noop
-      - setWeight: 20
-      - pause: {}
-      - setWeight: 40
-      - pause: {duration: 10}
-      - setWeight: 60
-      - pause: {duration: 10}
-      - setWeight: 80
-      - pause: {duration: 10}
+    blueGreen:
+      activeService: payments-api
+      previewService: payments-api-preview
+  # strategy:
+  #   canary:
+  #     analysis:
+  #       templates:
+  #         - templateName: payments-api-noop
+  #       startingStep: 1
+  #     steps:
+  #     - analysis:               ← this is a step analysis                                                                                                                                                        
+  #       templates:                                     
+  #         - templateName: payments-api-noop
+  #     - setWeight: 20
+  #     - pause: {}
+  #     - setWeight: 40
+  #     - pause: {duration: 10}
+  #     - setWeight: 60
+  #     - pause: {duration: 10}
+  #     - setWeight: 80
+  #     - pause: {duration: 10}
   selector:
     matchLabels:
       app: payments-api
@@ -61,6 +65,19 @@ spec:
   ports:
     - port: 80
       targetPort: 80
+  selector:
+    app: payments-api
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payments-api-preview
+  namespace: argoctopus
+spec:
+  type: ClusterIP
+  ports:
+    - port: 81
+      targetPort: 81
   selector:
     app: payments-api
 ---
