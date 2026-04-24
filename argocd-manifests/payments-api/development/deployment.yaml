@@ -19,8 +19,8 @@ spec:
         startingStep: 1
       steps:
       - analysis:
-        templates:                                     
-          - templateName: payments-api-noop
+          templates:                                     
+            - templateName: payments-api-noop
       - setWeight: 20
       - pause: {}
       - setWeight: 40
