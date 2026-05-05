@@ -1,0 +1,41 @@
+argocd-manifests/payments-api/development/load-resources-09.yaml
+  eed85b02bc98012b 1-900
+argocd-manifests/payments-api/development/load-resources-06.yaml
+  eed85b02bc98012b 1-1600
+argocd-manifests/payments-api/development/load-resources-04.yaml
+  eed85b02bc98012b 1-1600
+argocd-manifests/payments-api/development/load-resources-07.yaml
+  eed85b02bc98012b 1-1300
+argocd-manifests/payments-api/development/load-resources-08.yaml
+  eed85b02bc98012b 1-1300
+argocd-manifests/payments-api/development/load-resources-05.yaml
+  eed85b02bc98012b 1-1600
+argocd-manifests/payments-api/development/load-resources-00.yaml
+  eed85b02bc98012b 1-1600
+argocd-manifests/payments-api/development/load-resources-01.yaml
+  eed85b02bc98012b 1-1600
+argocd-manifests/payments-api/development/load-resources-02.yaml
+  eed85b02bc98012b 1-1600
+argocd-manifests/payments-api/development/load-resources-03.yaml
+  eed85b02bc98012b 1-1600
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "4b2b0803dd788336dcd9b193b3092b5eaf3f0788",
+  "prompts": {
+    "eed85b02bc98012b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "afc35f1f-5ea3-4e82-973c-ed2b0a9ab3de",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Victor Plakyda",
+      "messages": [],
+      "total_additions": 14700,
+      "total_deletions": 0,
+      "accepted_lines": 14700,
+      "overriden_lines": 0
+    }
+  }
+}
