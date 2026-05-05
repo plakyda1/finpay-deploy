@@ -1,0 +1,14 @@
+argocd-manifests/payments-api/development/deployment.yaml
+  h_d1ed4823c824d1 75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "907c05bd756b38dc9956ee3b98ab5d0c7ebf30cd",
+  "prompts": {},
+  "humans": {
+    "h_d1ed4823c824d1": {
+      "author": "Victor Plakyda"
+    }
+  }
+}
