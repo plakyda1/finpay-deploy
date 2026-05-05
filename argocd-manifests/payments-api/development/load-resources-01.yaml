@@ -1,0 +1,1600 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0100
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 100, "name": "load-cm-0100", "enabled": true}
+  settings.properties: |
+    service.id=100
+    service.name=load-cm-0100
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0101
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 101, "name": "load-cm-0101", "enabled": true}
+  settings.properties: |
+    service.id=101
+    service.name=load-cm-0101
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0102
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 102, "name": "load-cm-0102", "enabled": true}
+  settings.properties: |
+    service.id=102
+    service.name=load-cm-0102
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0103
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 103, "name": "load-cm-0103", "enabled": true}
+  settings.properties: |
+    service.id=103
+    service.name=load-cm-0103
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0104
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 104, "name": "load-cm-0104", "enabled": true}
+  settings.properties: |
+    service.id=104
+    service.name=load-cm-0104
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0105
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 105, "name": "load-cm-0105", "enabled": true}
+  settings.properties: |
+    service.id=105
+    service.name=load-cm-0105
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0106
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 106, "name": "load-cm-0106", "enabled": true}
+  settings.properties: |
+    service.id=106
+    service.name=load-cm-0106
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0107
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 107, "name": "load-cm-0107", "enabled": true}
+  settings.properties: |
+    service.id=107
+    service.name=load-cm-0107
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0108
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 108, "name": "load-cm-0108", "enabled": true}
+  settings.properties: |
+    service.id=108
+    service.name=load-cm-0108
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0109
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 109, "name": "load-cm-0109", "enabled": true}
+  settings.properties: |
+    service.id=109
+    service.name=load-cm-0109
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0110
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 110, "name": "load-cm-0110", "enabled": true}
+  settings.properties: |
+    service.id=110
+    service.name=load-cm-0110
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0111
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 111, "name": "load-cm-0111", "enabled": true}
+  settings.properties: |
+    service.id=111
+    service.name=load-cm-0111
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0112
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 112, "name": "load-cm-0112", "enabled": true}
+  settings.properties: |
+    service.id=112
+    service.name=load-cm-0112
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0113
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 113, "name": "load-cm-0113", "enabled": true}
+  settings.properties: |
+    service.id=113
+    service.name=load-cm-0113
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0114
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 114, "name": "load-cm-0114", "enabled": true}
+  settings.properties: |
+    service.id=114
+    service.name=load-cm-0114
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0115
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 115, "name": "load-cm-0115", "enabled": true}
+  settings.properties: |
+    service.id=115
+    service.name=load-cm-0115
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0116
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 116, "name": "load-cm-0116", "enabled": true}
+  settings.properties: |
+    service.id=116
+    service.name=load-cm-0116
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0117
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 117, "name": "load-cm-0117", "enabled": true}
+  settings.properties: |
+    service.id=117
+    service.name=load-cm-0117
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0118
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 118, "name": "load-cm-0118", "enabled": true}
+  settings.properties: |
+    service.id=118
+    service.name=load-cm-0118
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0119
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 119, "name": "load-cm-0119", "enabled": true}
+  settings.properties: |
+    service.id=119
+    service.name=load-cm-0119
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0120
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 120, "name": "load-cm-0120", "enabled": true}
+  settings.properties: |
+    service.id=120
+    service.name=load-cm-0120
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0121
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 121, "name": "load-cm-0121", "enabled": true}
+  settings.properties: |
+    service.id=121
+    service.name=load-cm-0121
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0122
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 122, "name": "load-cm-0122", "enabled": true}
+  settings.properties: |
+    service.id=122
+    service.name=load-cm-0122
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0123
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 123, "name": "load-cm-0123", "enabled": true}
+  settings.properties: |
+    service.id=123
+    service.name=load-cm-0123
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0124
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 124, "name": "load-cm-0124", "enabled": true}
+  settings.properties: |
+    service.id=124
+    service.name=load-cm-0124
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0125
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 125, "name": "load-cm-0125", "enabled": true}
+  settings.properties: |
+    service.id=125
+    service.name=load-cm-0125
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0126
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 126, "name": "load-cm-0126", "enabled": true}
+  settings.properties: |
+    service.id=126
+    service.name=load-cm-0126
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0127
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 127, "name": "load-cm-0127", "enabled": true}
+  settings.properties: |
+    service.id=127
+    service.name=load-cm-0127
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0128
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 128, "name": "load-cm-0128", "enabled": true}
+  settings.properties: |
+    service.id=128
+    service.name=load-cm-0128
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0129
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 129, "name": "load-cm-0129", "enabled": true}
+  settings.properties: |
+    service.id=129
+    service.name=load-cm-0129
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0130
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 130, "name": "load-cm-0130", "enabled": true}
+  settings.properties: |
+    service.id=130
+    service.name=load-cm-0130
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0131
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 131, "name": "load-cm-0131", "enabled": true}
+  settings.properties: |
+    service.id=131
+    service.name=load-cm-0131
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0132
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 132, "name": "load-cm-0132", "enabled": true}
+  settings.properties: |
+    service.id=132
+    service.name=load-cm-0132
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0133
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 133, "name": "load-cm-0133", "enabled": true}
+  settings.properties: |
+    service.id=133
+    service.name=load-cm-0133
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0134
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 134, "name": "load-cm-0134", "enabled": true}
+  settings.properties: |
+    service.id=134
+    service.name=load-cm-0134
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0135
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 135, "name": "load-cm-0135", "enabled": true}
+  settings.properties: |
+    service.id=135
+    service.name=load-cm-0135
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0136
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 136, "name": "load-cm-0136", "enabled": true}
+  settings.properties: |
+    service.id=136
+    service.name=load-cm-0136
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0137
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 137, "name": "load-cm-0137", "enabled": true}
+  settings.properties: |
+    service.id=137
+    service.name=load-cm-0137
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0138
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 138, "name": "load-cm-0138", "enabled": true}
+  settings.properties: |
+    service.id=138
+    service.name=load-cm-0138
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0139
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 139, "name": "load-cm-0139", "enabled": true}
+  settings.properties: |
+    service.id=139
+    service.name=load-cm-0139
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0140
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 140, "name": "load-cm-0140", "enabled": true}
+  settings.properties: |
+    service.id=140
+    service.name=load-cm-0140
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0141
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 141, "name": "load-cm-0141", "enabled": true}
+  settings.properties: |
+    service.id=141
+    service.name=load-cm-0141
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0142
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 142, "name": "load-cm-0142", "enabled": true}
+  settings.properties: |
+    service.id=142
+    service.name=load-cm-0142
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0143
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 143, "name": "load-cm-0143", "enabled": true}
+  settings.properties: |
+    service.id=143
+    service.name=load-cm-0143
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0144
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 144, "name": "load-cm-0144", "enabled": true}
+  settings.properties: |
+    service.id=144
+    service.name=load-cm-0144
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0145
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 145, "name": "load-cm-0145", "enabled": true}
+  settings.properties: |
+    service.id=145
+    service.name=load-cm-0145
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0146
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 146, "name": "load-cm-0146", "enabled": true}
+  settings.properties: |
+    service.id=146
+    service.name=load-cm-0146
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0147
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 147, "name": "load-cm-0147", "enabled": true}
+  settings.properties: |
+    service.id=147
+    service.name=load-cm-0147
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0148
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 148, "name": "load-cm-0148", "enabled": true}
+  settings.properties: |
+    service.id=148
+    service.name=load-cm-0148
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0149
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 149, "name": "load-cm-0149", "enabled": true}
+  settings.properties: |
+    service.id=149
+    service.name=load-cm-0149
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0150
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 150, "name": "load-cm-0150", "enabled": true}
+  settings.properties: |
+    service.id=150
+    service.name=load-cm-0150
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0151
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 151, "name": "load-cm-0151", "enabled": true}
+  settings.properties: |
+    service.id=151
+    service.name=load-cm-0151
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0152
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 152, "name": "load-cm-0152", "enabled": true}
+  settings.properties: |
+    service.id=152
+    service.name=load-cm-0152
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0153
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 153, "name": "load-cm-0153", "enabled": true}
+  settings.properties: |
+    service.id=153
+    service.name=load-cm-0153
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0154
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 154, "name": "load-cm-0154", "enabled": true}
+  settings.properties: |
+    service.id=154
+    service.name=load-cm-0154
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0155
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 155, "name": "load-cm-0155", "enabled": true}
+  settings.properties: |
+    service.id=155
+    service.name=load-cm-0155
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0156
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 156, "name": "load-cm-0156", "enabled": true}
+  settings.properties: |
+    service.id=156
+    service.name=load-cm-0156
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0157
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 157, "name": "load-cm-0157", "enabled": true}
+  settings.properties: |
+    service.id=157
+    service.name=load-cm-0157
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0158
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 158, "name": "load-cm-0158", "enabled": true}
+  settings.properties: |
+    service.id=158
+    service.name=load-cm-0158
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0159
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 159, "name": "load-cm-0159", "enabled": true}
+  settings.properties: |
+    service.id=159
+    service.name=load-cm-0159
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0160
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 160, "name": "load-cm-0160", "enabled": true}
+  settings.properties: |
+    service.id=160
+    service.name=load-cm-0160
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0161
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 161, "name": "load-cm-0161", "enabled": true}
+  settings.properties: |
+    service.id=161
+    service.name=load-cm-0161
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0162
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 162, "name": "load-cm-0162", "enabled": true}
+  settings.properties: |
+    service.id=162
+    service.name=load-cm-0162
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0163
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 163, "name": "load-cm-0163", "enabled": true}
+  settings.properties: |
+    service.id=163
+    service.name=load-cm-0163
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0164
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 164, "name": "load-cm-0164", "enabled": true}
+  settings.properties: |
+    service.id=164
+    service.name=load-cm-0164
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0165
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 165, "name": "load-cm-0165", "enabled": true}
+  settings.properties: |
+    service.id=165
+    service.name=load-cm-0165
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0166
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 166, "name": "load-cm-0166", "enabled": true}
+  settings.properties: |
+    service.id=166
+    service.name=load-cm-0166
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0167
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 167, "name": "load-cm-0167", "enabled": true}
+  settings.properties: |
+    service.id=167
+    service.name=load-cm-0167
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0168
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 168, "name": "load-cm-0168", "enabled": true}
+  settings.properties: |
+    service.id=168
+    service.name=load-cm-0168
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0169
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 169, "name": "load-cm-0169", "enabled": true}
+  settings.properties: |
+    service.id=169
+    service.name=load-cm-0169
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0170
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 170, "name": "load-cm-0170", "enabled": true}
+  settings.properties: |
+    service.id=170
+    service.name=load-cm-0170
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0171
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 171, "name": "load-cm-0171", "enabled": true}
+  settings.properties: |
+    service.id=171
+    service.name=load-cm-0171
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0172
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 172, "name": "load-cm-0172", "enabled": true}
+  settings.properties: |
+    service.id=172
+    service.name=load-cm-0172
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0173
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 173, "name": "load-cm-0173", "enabled": true}
+  settings.properties: |
+    service.id=173
+    service.name=load-cm-0173
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0174
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 174, "name": "load-cm-0174", "enabled": true}
+  settings.properties: |
+    service.id=174
+    service.name=load-cm-0174
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0175
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 175, "name": "load-cm-0175", "enabled": true}
+  settings.properties: |
+    service.id=175
+    service.name=load-cm-0175
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0176
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 176, "name": "load-cm-0176", "enabled": true}
+  settings.properties: |
+    service.id=176
+    service.name=load-cm-0176
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0177
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 177, "name": "load-cm-0177", "enabled": true}
+  settings.properties: |
+    service.id=177
+    service.name=load-cm-0177
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0178
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 178, "name": "load-cm-0178", "enabled": true}
+  settings.properties: |
+    service.id=178
+    service.name=load-cm-0178
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0179
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 179, "name": "load-cm-0179", "enabled": true}
+  settings.properties: |
+    service.id=179
+    service.name=load-cm-0179
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0180
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 180, "name": "load-cm-0180", "enabled": true}
+  settings.properties: |
+    service.id=180
+    service.name=load-cm-0180
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0181
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 181, "name": "load-cm-0181", "enabled": true}
+  settings.properties: |
+    service.id=181
+    service.name=load-cm-0181
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0182
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 182, "name": "load-cm-0182", "enabled": true}
+  settings.properties: |
+    service.id=182
+    service.name=load-cm-0182
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0183
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 183, "name": "load-cm-0183", "enabled": true}
+  settings.properties: |
+    service.id=183
+    service.name=load-cm-0183
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0184
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 184, "name": "load-cm-0184", "enabled": true}
+  settings.properties: |
+    service.id=184
+    service.name=load-cm-0184
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0185
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 185, "name": "load-cm-0185", "enabled": true}
+  settings.properties: |
+    service.id=185
+    service.name=load-cm-0185
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0186
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 186, "name": "load-cm-0186", "enabled": true}
+  settings.properties: |
+    service.id=186
+    service.name=load-cm-0186
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0187
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 187, "name": "load-cm-0187", "enabled": true}
+  settings.properties: |
+    service.id=187
+    service.name=load-cm-0187
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0188
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 188, "name": "load-cm-0188", "enabled": true}
+  settings.properties: |
+    service.id=188
+    service.name=load-cm-0188
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0189
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 189, "name": "load-cm-0189", "enabled": true}
+  settings.properties: |
+    service.id=189
+    service.name=load-cm-0189
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0190
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 190, "name": "load-cm-0190", "enabled": true}
+  settings.properties: |
+    service.id=190
+    service.name=load-cm-0190
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0191
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 191, "name": "load-cm-0191", "enabled": true}
+  settings.properties: |
+    service.id=191
+    service.name=load-cm-0191
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0192
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 192, "name": "load-cm-0192", "enabled": true}
+  settings.properties: |
+    service.id=192
+    service.name=load-cm-0192
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0193
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 193, "name": "load-cm-0193", "enabled": true}
+  settings.properties: |
+    service.id=193
+    service.name=load-cm-0193
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0194
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 194, "name": "load-cm-0194", "enabled": true}
+  settings.properties: |
+    service.id=194
+    service.name=load-cm-0194
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0195
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 195, "name": "load-cm-0195", "enabled": true}
+  settings.properties: |
+    service.id=195
+    service.name=load-cm-0195
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0196
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 196, "name": "load-cm-0196", "enabled": true}
+  settings.properties: |
+    service.id=196
+    service.name=load-cm-0196
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0197
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 197, "name": "load-cm-0197", "enabled": true}
+  settings.properties: |
+    service.id=197
+    service.name=load-cm-0197
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0198
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 198, "name": "load-cm-0198", "enabled": true}
+  settings.properties: |
+    service.id=198
+    service.name=load-cm-0198
+    log.level=info
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-cm-0199
+  namespace: load
+  labels:
+    app: payments-api
+    component: load-test
+data:
+  config.json: |
+    {"id": 199, "name": "load-cm-0199", "enabled": true}
+  settings.properties: |
+    service.id=199
+    service.name=load-cm-0199
+    log.level=info
