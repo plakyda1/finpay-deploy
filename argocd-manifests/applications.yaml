@@ -13,35 +13,38 @@ kind: Application
 metadata:
   name: payments-api-dev
   namespace: argocd
+  annotations:
+    argo.octopus.com/project: "load"
+    argo.octopus.com/environment: "development"
 spec:
   project: default
   source:
-    repoURL: https://github.com/<YOUR_USERNAME>/finpay-deploy.git
-    targetRevision: main
+    repoURL: https://github.com/plakyda1/finpay-deploy.git
+    targetRevision: load
     path: argocd-manifests/payments-api/development
   destination:
     server: https://kubernetes.default.svc
-    namespace: payments-dev
+    namespace: load
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: payments-api-staging
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/<YOUR_USERNAME>/finpay-deploy.git
-    targetRevision: main
-    path: argocd-manifests/payments-api/staging
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: payments-staging
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: payments-api-staging
+#   namespace: argocd
+# spec:
+#   project: default
+#   source:
+#     repoURL: https://github.com/<YOUR_USERNAME>/finpay-deploy.git
+#     targetRevision: main
+#     path: argocd-manifests/payments-api/staging
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: payments-staging
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
