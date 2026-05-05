@@ -72,7 +72,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate                                                                                                                   
 metadata:
   name: payments-api-noop
-  namespace: argoctopus                                                                                                                    
+  namespace: load                                                                                                    
 spec:
   metrics:                                                                                                                                 
     - name: always-pass                                                                                                                  
