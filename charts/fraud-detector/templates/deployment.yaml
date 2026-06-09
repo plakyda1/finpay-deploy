@@ -34,16 +34,20 @@ spec:
     matchLabels:
       app: {{ .Release.Name }}
   strategy:
-    canary:
-      steps:
-        - setWeight: 20
-        - analysis:
-            templates:
-              - templateName: always-pass
-        - setWeight: 50
-        - pause:
-            duration: 30s
-        - setWeight: 100
+    blueGreen: 
+      activeService: rollout-bluegreen-active
+      previewService: rollout-bluegreen-preview
+  # strategy:
+  #   canary:
+  #     steps:
+  #       - setWeight: 20
+  #       - analysis:
+  #           templates:
+  #             - templateName: always-pass
+  #       - setWeight: 50
+  #       - pause:
+  #           duration: 30s
+  #       - setWeight: 100
   template:
     metadata:
       labels:
