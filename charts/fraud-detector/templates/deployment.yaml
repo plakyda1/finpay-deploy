@@ -35,7 +35,7 @@ spec:
       app: {{ .Release.Name }}
   strategy:
     blueGreen: 
-      activeService: rollout-bluegreen-active
+      activeService: deploytestlobster-development
       previewService: rollout-bluegreen-preview
   # strategy:
   #   canary:
