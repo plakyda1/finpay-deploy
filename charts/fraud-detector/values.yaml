@@ -27,7 +27,7 @@ nodeSelector: {}
 
 autoscaling:
   enabled: false
-  minReplicas: 1
+  minReplicas: 4
   maxReplicas: 5
   targetCPUUtilization: 80
 
