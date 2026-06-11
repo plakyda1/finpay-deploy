@@ -33,21 +33,21 @@ spec:
   selector:
     matchLabels:
       app: {{ .Release.Name }}
-  strategy:
-    blueGreen: 
-      activeService: deploytestlobster-development
-      previewService: rollout-bluegreen-preview
   # strategy:
-  #   canary:
-  #     steps:
-  #       - setWeight: 20
-  #       - analysis:
-  #           templates:
-  #             - templateName: always-pass
-  #       - setWeight: 50
-  #       - pause:
-  #           duration: 30s
-  #       - setWeight: 100
+  #   blueGreen: 
+  #     activeService: deploytestlobster-development
+  #     previewService: rollout-bluegreen-preview
+  strategy:
+    canary:
+      steps:
+        - setWeight: 20
+        - analysis:
+            templates:
+              - templateName: always-pass
+        - setWeight: 50
+        - pause:
+            duration: 30s
+        - setWeight: 100
   template:
     metadata:
       labels:
