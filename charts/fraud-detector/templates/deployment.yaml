@@ -40,7 +40,7 @@ spec:
   strategy:
     canary:
       steps:
-        - setWeight: 20
+        - setWeight: 30
         - analysis:
             templates:
               - templateName: always-pass
