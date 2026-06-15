@@ -144,9 +144,9 @@ spec:
                 templateName: always-pass                                                                                                                                                                      
         - setWeight: 50                             # step 3                                                                                                                                                   
         - pause: { duration: 30s }                  # step 4          
-        - analysis:
-            templates:
-              -templateName: always-inconclusive                                                                                                                                         
+        - analysis:                       
+            templates:                                                                                                                                                                                         
+              - templateName: always-inconclusive                                                                                                                                                 
         - setWeight: 100                            # step 5
   template:
     metadata:
