@@ -1,22 +1,63 @@
-apiVersion: argoproj.io/v1alpha1
-kind: AnalysisTemplate
-metadata:
-  name: always-pass
-spec:
-  metrics:
-    - name: always-pass
-      provider:
-        job:
-          spec:
-            backoffLimit: 0
-            template:
-              spec:
-                containers:
-                  - name: always-pass
-                    image: alpine:3.18
-                    command: [sh, -c, "exit 0"]
-                restartPolicy: Never
-
+apiVersion: argoproj.io/v1alpha1                                                                                                                                                                               
+kind: AnalysisTemplate                                                                                                                                                                                         
+metadata:                                                                                                                                                                                                      
+  name: always-pass                                                                                                                                                                                            
+spec:                                                                                                                                                                                                          
+  metrics:                                                                                                                                                                                                     
+    - name: pass                                                                                                                                                                                               
+      count: 1                                                                                                                                                                                                 
+      provider:                                                                                                                                                                                                
+        job:                                                                                                                                                                                                   
+          spec:                                                                                                                                                                                                
+            backoffLimit: 0                                                                                                                                                                                    
+            template:                                                                                                                                                                                          
+              spec:                                                                                                                                                                                            
+                restartPolicy: Never                                                                                                                                                                           
+                containers:                                                                                                                                                                                    
+                  - name: test                                                                                                                                                                                 
+                    image: busybox                                                                                                                                                                             
+                    command: [sh, -c, "echo ok; exit 0"]
+---            
+apiVersion: argoproj.io/v1alpha1                                                                                                                                                                               
+kind: AnalysisTemplate                                                                                                                                                                                         
+metadata:                                                                                                                                                                                                      
+  name: always-fail            # swap a step to this to test Failed/aborted                                                                                                                                    
+spec:                                                                                                                                                                                                          
+  metrics:                                                                                                                                                                                                     
+    - name: fail                                                                                                                                                                                               
+      count: 1                                                                                                                                                                                                 
+      provider:                                                                                                                                                                                                
+        job:                                                                                                                                                                                                   
+          spec:                                                                                                                                                                                                
+            backoffLimit: 0                                                                                                                                                                                    
+            template:                                                                                                                                                                                          
+              spec:                                                                                                                                                                                            
+                restartPolicy: Never                                                                                                                                                                           
+                containers:                                                                                                                                                                                    
+                  - name: test                                                                                                                                                                                 
+                    image: busybox                                                                                                                                                                             
+                    command: [sh, -c, "echo nope; exit 1"]                                                                                                                                                     
+---                                                                                                                                                                                                            
+apiVersion: argoproj.io/v1alpha1                                                                                                                                                                               
+kind: AnalysisTemplate                                                                                                                                                                                         
+metadata:                                                                                                                                                                                                      
+  name: background-rate        # background analysis: repeats during the rollout                                                                                                                               
+spec:                                                                                                                                                                                                          
+  metrics:                                                                                                                                                                                                     
+    - name: rate                                                                                                                                                                                               
+      count: 10                                                                                                                                                                                                
+      interval: 30s                                                                                                                                                                                            
+      provider:                                                                                                                                                                                                
+        job:                                                                                                                                                                                                   
+          spec:                                                                                                                                                                                                
+            backoffLimit: 0                                                                                                                                                                                    
+            template:                                                                                                                                                                                          
+              spec:                                                                                                                                                                                            
+                restartPolicy: Never                                                                                                                                                                           
+                containers:                                                                                                                                                                                    
+                  - name: test                                                                                                                                                                                 
+                    image: busybox                                                                                                                                                                             
+                    command: [sh, -c, "exit 0"]   
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
@@ -33,30 +74,41 @@ spec:
   selector:
     matchLabels:
       app: {{ .Release.Name }}
-  strategy:
-    blueGreen: 
-      activeService: deploytestlobster-development
-      previewService: deploytestlobster-development-preview
-      autoPromotionEnabled: false
-
-      prePromotionAnalysis:
-        templates:
-          - templateName: always-pass
-
-      postPromotionAnalysis:
-        templates:
-          - templateName: always-pass
   # strategy:
-  #   canary:
-  #     steps:
-  #       - setWeight: 30
-  #       - analysis:
-  #           templates:
-  #             - templateName: always-pass
-  #       - setWeight: 50
-  #       - pause:
-  #           duration: 30s
-  #       - setWeight: 100
+    # blueGreen: 
+    #   activeService: deploytestlobster-development
+    #   previewService: deploytestlobster-development-preview
+    #   autoPromotionEnabled: false
+
+    #   prePromotionAnalysis:
+    #     templates:
+    #       - templateName: always-pass
+
+    #   postPromotionAnalysis:
+    #     templates:
+    #       - templateName: always-pass
+  strategy:                                                                                                                                                                                                    
+    canary:                                                                                                                                                                                                    
+      analysis:                                     # ← BACKGROUND  → name {prefix}, rollout-type=Background                                                                                                   
+        startingStep: 1                                                                                                                                                                                        
+        templates:                                                                                                                                                                                             
+          - templateName: background-rate                                                                                                                                                                      
+      steps:                                                                                                                                                                                                   
+        - setWeight: 30                             # step 0                                                                                                                                                   
+        - analysis:                                 # step 1 ← STEP analysis → {prefix}-1, rollout-type=Step                                                                                                   
+            templates:                                                                                                                                                                                         
+              - templateName: always-pass                                                                                                                                                                      
+        - experiment:                               # step 2 ← EXPERIMENT → {prefix}-2 (+ its 'smoke' run)                                                                                                     
+            duration: 2m                                                                                                                                                                                       
+            templates:                                                                                                                                                                                         
+              - name: canary                                                                                                                                                                                   
+                specRef: canary                                                                                                                                                                                
+            analyses:                                                                                                                                                                                          
+              - name: smoke                                                                                                                                                                                    
+                templateName: always-pass                                                                                                                                                                      
+        - setWeight: 50                             # step 3                                                                                                                                                   
+        - pause: { duration: 30s }                  # step 4                                                                                                                                                   
+        - setWeight: 100                            # step 5
   template:
     metadata:
       labels:
