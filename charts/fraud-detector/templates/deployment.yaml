@@ -1,3 +1,39 @@
+apiVersion: apps/v1                                                                                                                                                                                            
+kind: Deployment                                                                                                                                                                                               
+metadata: { name: echo-5 }                                                                                                                                                                                     
+spec:                                                                                                                                                                                                          
+  replicas: 1                                                                                                                                                                                                  
+  selector: { matchLabels: { app: echo-5 } }                                                                                                                                                                   
+  template:                                                                                                                                                                                                    
+    metadata: { labels: { app: echo-5 } }                                                                                                                                                                      
+    spec:                                                                                                                                                                                                      
+      containers:                                                                                                                                                                                              
+        - name: echo                                                                                                                                                                                           
+          image: hashicorp/http-echo                                                                                                                                                                           
+          args: ["-text=5", "-listen=:5678"]                                                                                                                                                                   
+          ports: [{ containerPort: 5678 }]                                                                                                                                                                     
+---                                                                                                                                                                                                            
+apiVersion: v1                                                                                                                                                                                                 
+kind: Service                                                                                                                                                                                                  
+metadata: { name: echo-5 }                                                                                                                                                                                     
+spec:                                                                                                                                                                                                          
+  selector: { app: echo-5 }                                                                                                                                                                                    
+  ports: [{ port: 80, targetPort: 5678 }]                                                                                                                                                                      
+---                                                                                                                                                                                                            
+apiVersion: argoproj.io/v1alpha1                                                                                                                                                                               
+kind: AnalysisTemplate                                                                                                                                                                                         
+metadata: { name: always-inconclusive }                                                                                                                                                                        
+spec:                                                                                                                                                                                                          
+  metrics:                                                                                                                                                                                                     
+    - name: inconclusive                                                                                                                                                                                       
+      count: 1                                                                                                                                                                                                 
+      successCondition: 'result == "win"'    # body is "5" → never true                                                                                                                                        
+      failureCondition: 'result == "lose"'   # → never true → Inconclusive                                                                                                                                     
+      provider:                                                                                                                                                                                                
+        web:                                                                                                                                                                                                   
+          url: http://echo-5.<namespace>.svc/                                                                                                                                                                  
+          method: GET                    
+---    
 apiVersion: argoproj.io/v1alpha1                                                                                                                                                                               
 kind: AnalysisTemplate                                                                                                                                                                                         
 metadata:                                                                                                                                                                                                      
@@ -107,7 +143,10 @@ spec:
               - name: smoke                                                                                                                                                                                    
                 templateName: always-pass                                                                                                                                                                      
         - setWeight: 50                             # step 3                                                                                                                                                   
-        - pause: { duration: 30s }                  # step 4                                                                                                                                                   
+        - pause: { duration: 30s }                  # step 4          
+        - analysis:
+            templates:
+              -templateName: always-inconclusive                                                                                                                                         
         - setWeight: 100                            # step 5
   template:
     metadata:
