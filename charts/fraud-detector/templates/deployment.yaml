@@ -31,7 +31,7 @@ spec:
       failureCondition: 'result == "lose"'   # → never true → Inconclusive                                                                                                                                     
       provider:                                                                                                                                                                                                
         web:                                                                                                                                                                                                   
-          url: http://echo-5.<namespace>.svc/                                                                                                                                                                  
+          url: http://echo-5.lobster.svc/                                                                                                                                                                  
           method: GET                    
 ---    
 apiVersion: argoproj.io/v1alpha1                                                                                                                                                                               
