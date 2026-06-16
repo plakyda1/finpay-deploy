@@ -131,7 +131,7 @@ spec:
           - templateName: background-rate                                                                                                                                                                      
       steps:                                                                                                                                                                                                   
         - setWeight: 30                             # step 0                                                                                                                                                   
-        - analysis:                                 # step 1 ← STEP analysis → {prefix}-1, rollout-type=Step                                                                                                   
+          analysis:                                 # step 1 ← STEP analysis → {prefix}-1, rollout-type=Step                                                                                                   
             templates:                                                                                                                                                                                         
               - templateName: always-pass                                                                                                                                                                      
         - experiment:                               # step 2 ← EXPERIMENT → {prefix}-2 (+ its 'smoke' run)                                                                                                     
@@ -144,9 +144,9 @@ spec:
                 templateName: always-pass                                                                                                                                                                      
         - setWeight: 50                             # step 3                                                                                                                                                   
         - pause: { duration: 30s }                  # step 4          
-        - analysis:                       
-            templates:                                                                                                                                                                                         
-              - templateName: always-inconclusive                                                                                                                                                 
+        # - analysis:                       
+        #     templates:                                                                                                                                                                                         
+        #       - templateName: always-inconclusive                                                                                                                                                 
         - setWeight: 100                            # step 5
   template:
     metadata:
