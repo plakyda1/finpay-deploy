@@ -151,7 +151,7 @@ spec:
               - name: smoke                                                                                                                                                                                    
                 templateName: always-pass                                                                                                                                                                      
         - setWeight: 50                             # Step 3: Traffic router shifts exactly 50% traffic to canary
-        - pause:                  
+        - pause: {}                  
         - setWeight: 100                            # Step 5: Traffic router shifts 100% traffic to canary
   # strategy:
   #   canary:                                                                                                                                                                                                    
@@ -188,7 +188,7 @@ spec:
     spec:
       containers:
         - name: payments-api
-          image: nginx:1.25-alpine
+          image: nginx:1.24-alpine
           ports:
             - containerPort: 80
           env:
