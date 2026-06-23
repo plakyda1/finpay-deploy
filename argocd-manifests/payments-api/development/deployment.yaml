@@ -151,7 +151,7 @@ spec:
               - name: smoke                                                                                                                                                                                    
                 templateName: always-pass                                                                                                                                                                      
         - setWeight: 50                             # Step 3: Traffic router shifts exactly 50% traffic to canary
-        - pause: { duration: 30s }                  
+        - pause:                  
         - setWeight: 100                            # Step 5: Traffic router shifts 100% traffic to canary
   # strategy:
   #   canary:                                                                                                                                                                                                    
